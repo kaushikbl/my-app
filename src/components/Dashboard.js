@@ -1,31 +1,12 @@
 import React from 'react';
-import './App.css';
 
-const Dashboard = () => {
+export default function Dashboard() {
   return (
-    <div className="container">
-      <h2>House Construction Dashboard</h2>
-
-      <form>
-        <label>Project Name</label>
-        <input type="text" placeholder="e.g. New Villa" />
-
-        <label>Budget (₹)</label>
-        <input type="number" placeholder="e.g. 1000000" />
-
-        <label>Construction Type</label>
-        <select>
-          <option>Residential</option>
-          <option>Commercial</option>
-        </select>
-
-        <label>Description</label>
-        <textarea rows="4" placeholder="Project details..." />
-
-        <button type="submit">Submit</button>
-      </form>
+    <div>
+      <h2>🏗️ House Construction </h2>
+      <p>Budget: 1209700</p>
+      <p>Tasks in Progress: 3</p>
+      <p>Materials Ordered: 12</p>
     </div>
   );
-};
-
-export default Dashboard;
+}
