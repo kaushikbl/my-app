@@ -7,7 +7,7 @@ import ExpenseForm from './components/ExpenseForm';
 function App() {
   return (
     <div className="App">
-      <h1>🏠 House Construction Manager</h1>
+      <h1>🏠 House Construction </h1>
       <Dashboard />
       <hr />
       <TaskForm />
