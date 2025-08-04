@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
 
 const Dashboard = () => {
+  useEffect(() => {
+    document.title = 'My Build Tracker'; // Sets tab title
+  }, []);
   return (
     <div className="container">
-      <h2>House Construction Dashboard</h2>
+      <h2>Dashboard</h2>
 
       <form>
         <label>Project Name</label>
+
         <input type="text" placeholder="e.g. New Villa" />
 
         <label>Budget (₹)</label>
