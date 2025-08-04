@@ -4,14 +4,20 @@ import logo from '../assets/logo.png';
 
 const Dashboard = () => {
   useEffect(() => {
-    document.title = 'My Build Tracker'; // Sets tab title
+    document.title = 'Construction Tracker'; // Sets tab title
   }, []);
+
   return (
     <div className="container">
+      {/* Header with logo */}
+      <header className="dashboard-header">
+        <img src={logo} alt="My Build Tracker Logo" className="logo" />
+        <h2>My Build Tracker</h2>
+        </header>
       <h2>Dashboard</h2>
 
       <form>
-        <label>Project Name</label>
+        <label>Construction Tracker</label>
 
         <input type="text" placeholder="e.g. New Villa" />
 
