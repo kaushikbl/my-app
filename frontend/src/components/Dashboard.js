@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react';
 import '../App.css';
 import logo from '../assets/logo.png';
+import { fetchProjects } from './api';
+
+useEffect(() => {
+  fetchProjects().then(setProjects);
+}, []);
+
+
 
 const Dashboard = () => {
   useEffect(() => {
