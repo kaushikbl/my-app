@@ -8,16 +8,20 @@ function getAuthHeaders() {
   };
 }
 
-export function fetchProjects() {
+export async function fetchProjects() {
+  console.log(" inside fetch projects function");
+  const url = "https://example.org/products.json";
+  const response = await fetch(url);
+  console.log(response);
   // return fetch(`${API_BASE_URL}/api/projects`, {
-  return fetch("https://dummyjson.com/products", {
-    headers: getAuthHeaders(),
-  }).then(res => {
-    if (!res.ok) {
-      throw new Error('Failed to fetch projects');
-    }
-    return res.json();
-  });
+  // return fetch("https://dummyjson.com/products", {
+  //   headers: getAuthHeaders(),
+  // }).then(res => {
+  //   if (!res.ok) {
+  //     throw new Error('Failed to fetch projects');
+  //   }
+  //   return res.json();
+  // });
 }
 
 export function createProject(data) {
