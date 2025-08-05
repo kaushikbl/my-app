@@ -21,8 +21,8 @@ const Login = ({ onLogin }) => {
       const data = await res.json();
 
       if (res.ok && data.token) {
-        localStorage.setItem('token', data.token); // ✅ Save token
-        onLogin?.(); // Optionally trigger redirect or refresh
+        localStorage.setItem('token', data.token);
+        onLogin?.();
       } else {
         setError(data.message || 'Login failed');
       }
