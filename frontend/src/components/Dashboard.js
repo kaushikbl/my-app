@@ -21,11 +21,11 @@ const Dashboard = () => {
       <h2>Dashboard</h2>
 
       {/* Display fetched projects */}
-      <ul>
+      {/* <ul>
         {projects.map((project, index) => (
           <li key={index}>{project.name}</li>
         ))}
-      </ul>
+      </ul> */}
 
       <form>
         <label>Construction Tracker</label>
