@@ -4,7 +4,7 @@ const app = express();
 const authRoutes = require('./routes/authRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const uploadRoutes = require('./routes/uploadRoutes');
-
+console.log("in backend app.js)");
 app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
