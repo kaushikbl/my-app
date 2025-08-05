@@ -3,6 +3,7 @@ import Dashboard from './components/Dashboard';
 import TaskForm from './components/TaskForm';
 import MaterialForm from './components/MaterialForm';
 import ExpenseForm from './components/ExpenseForm';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -14,6 +15,20 @@ function App() {
       <MaterialForm />
       <ExpenseForm />
     </div>
+  );
+}
+
+export default App;
+
+import Login from './pages/Login';
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
