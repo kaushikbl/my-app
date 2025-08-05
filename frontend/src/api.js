@@ -24,15 +24,15 @@ export async function fetchProjects() {
   // });
 }
 
-export function createProject(data) {
-  return fetch(`${API_BASE_URL}/api/projects`, {
-    method: 'POST',
-    headers: getAuthHeaders(),
-    body: JSON.stringify(data),
-  }).then(res => {
-    if (!res.ok) {
-      throw new Error('Failed to create project');
-    }
-    return res.json();
-  });
-}
+//export function createProject(data) {
+ // return fetch(`${API_BASE_URL}/api/projects`, {
+    //method: 'POST',
+    //headers: getAuthHeaders(),
+   // body: JSON.stringify(data),
+ // }).then(res => {
+    //if (!res.ok) {
+    //  throw new Error('Failed to create project');
+   // }
+    //return res.json();
+  //});
+//}
