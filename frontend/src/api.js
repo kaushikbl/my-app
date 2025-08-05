@@ -10,7 +10,7 @@ function getAuthHeaders() {
 
 export async function fetchProjects() {
   console.log(" inside fetch projects function");
-  const url = "https://example.org/products.json";
+  const url = "https://dummyjson.com/products";
   const response = await fetch(url);
   console.log(response);
   // return fetch(`${API_BASE_URL}/api/projects`, {
