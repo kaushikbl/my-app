@@ -1,5 +1,5 @@
 # Use official Node.js image asbase
-FROM node:16-alpine
+FROM node:18
 
 # Set working directory inside the container
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --production
+RUN npm install
 
 # Copy the rest of your backend source code
 COPY . .

@@ -9,7 +9,8 @@ function getAuthHeaders() {
 }
 
 export function fetchProjects() {
-  return fetch(`${API_BASE_URL}/api/projects`, {
+  // return fetch(`${API_BASE_URL}/api/projects`, {
+  return fetch("https://dummyjson.com/products", {
     headers: getAuthHeaders(),
   }).then(res => {
     if (!res.ok) {
