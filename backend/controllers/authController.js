@@ -10,9 +10,13 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  console.log('Incoming login body:', req.body);
+  console.log('Login request body:', req.body);
 
   const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ message: 'Missing email or password' });
+  }
   
   const user = await User.findOne({ email });
   if (!user) return res.status(400).json({ message: 'Invalid credentials' });
