@@ -22,7 +22,7 @@ services:
     build:
       context: ./frontend
       args:
-        - REACT_APP_API_BASE_URL=http://3.144.10.127:5000
+        - REACT_APP_API_BASE_URL=http://18.118.226.139:5000
     ports:
       - "3000:80"
     depends_on:
