@@ -9,30 +9,29 @@ function getAuthHeaders() {
 }
 
 export async function fetchProjects() {
-  console.log(" inside fetch projects function");
-  const url = "https://dummyjson.com/products";
-  const response = await fetch(url);
-  console.log(response);
-  // return fetch(`${API_BASE_URL}/api/projects`, {
-  // return fetch("https://dummyjson.com/products", {
-  //   headers: getAuthHeaders(),
-  // }).then(res => {
-  //   if (!res.ok) {
-  //     throw new Error('Failed to fetch projects');
-  //   }
-  //   return res.json();
-  // });
+ // console.log(" inside fetch projects function");
+ // const url = "https://dummyjson.com/products";
+ // const response = await fetch(url);
+ // console.log(response);
+   return fetch(`${API_BASE_URL}/api/projects`, {
+     headers: getAuthHeaders(),
+   }).then(res => {
+     if (!res.ok) {
+       throw new Error('Failed to fetch projects');
+    }
+     return res.json();
+   });
 }
 
-//export function createProject(data) {
- // return fetch(`${API_BASE_URL}/api/projects`, {
-    //method: 'POST',
-    //headers: getAuthHeaders(),
-   // body: JSON.stringify(data),
- // }).then(res => {
-    //if (!res.ok) {
-    //  throw new Error('Failed to create project');
-   // }
-    //return res.json();
-  //});
-//}
+export function createProject(data) {
+  return fetch(`${API_BASE_URL}/api/projects`, {
+    method: 'POST',
+    headers: getAuthHeaders(),
+    body: JSON.stringify(data),
+  }).then(res => {
+    if (!res.ok) {
+      throw new Error('Failed to create project');
+    }
+    return res.json();
+  });
+}
